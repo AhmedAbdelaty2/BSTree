@@ -14,10 +14,10 @@ void inOrder(pNode);
 int main()
 {
     struct node *pRoot = NULL;
-    pRoot = insertNode(pRoot, 10);
-    insertNode(pRoot, 7);
-    insertNode(pRoot, 13);
+    pRoot = insertNode(pRoot, 7);
     insertNode(pRoot, 5);
+    insertNode(pRoot, 6);
+    insertNode(pRoot, 10);
     insertNode(pRoot, 8);
     insertNode(pRoot, 12);
 
@@ -63,11 +63,12 @@ void inOrder(struct node *pRoot)
     if(pRoot->pLeft != NULL)
         inOrder(pRoot->pLeft);
 
+    printf("%d\t", pRoot->Data);
+
     if(pRoot->pRight != NULL)
         inOrder(pRoot->pRight);
-
-    printf("%d\t", pRoot->Data);
 }
+
 
 void preOrder(struct node *pRoot)
 {
